@@ -35,13 +35,13 @@
             this.Von = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbxMainOutput = new System.Windows.Forms.ListBox();
-            this.dgvMainOutput = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainOutput)).BeginInit();
+            this.lbxMainOutputTime = new System.Windows.Forms.ListBox();
+            this.lbxException = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnMainSearch
             // 
-            this.btnMainSearch.Location = new System.Drawing.Point(266, 45);
+            this.btnMainSearch.Location = new System.Drawing.Point(383, 45);
             this.btnMainSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMainSearch.Name = "btnMainSearch";
             this.btnMainSearch.Size = new System.Drawing.Size(86, 31);
@@ -52,7 +52,7 @@
             // 
             // btnMainSearchChange
             // 
-            this.btnMainSearchChange.Location = new System.Drawing.Point(266, 101);
+            this.btnMainSearchChange.Location = new System.Drawing.Point(383, 98);
             this.btnMainSearchChange.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMainSearchChange.Name = "btnMainSearchChange";
             this.btnMainSearchChange.Size = new System.Drawing.Size(86, 32);
@@ -66,7 +66,7 @@
             this.tbxMainSearchFrom.Location = new System.Drawing.Point(129, 45);
             this.tbxMainSearchFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxMainSearchFrom.Name = "tbxMainSearchFrom";
-            this.tbxMainSearchFrom.Size = new System.Drawing.Size(114, 27);
+            this.tbxMainSearchFrom.Size = new System.Drawing.Size(223, 27);
             this.tbxMainSearchFrom.TabIndex = 2;
             // 
             // tbxMainSearchTo
@@ -74,7 +74,7 @@
             this.tbxMainSearchTo.Location = new System.Drawing.Point(129, 101);
             this.tbxMainSearchTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxMainSearchTo.Name = "tbxMainSearchTo";
-            this.tbxMainSearchTo.Size = new System.Drawing.Size(114, 27);
+            this.tbxMainSearchTo.Size = new System.Drawing.Size(223, 27);
             this.tbxMainSearchTo.TabIndex = 3;
             // 
             // Von
@@ -104,26 +104,40 @@
             this.lbxMainOutput.Location = new System.Drawing.Point(46, 164);
             this.lbxMainOutput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbxMainOutput.Name = "lbxMainOutput";
-            this.lbxMainOutput.Size = new System.Drawing.Size(306, 280);
+            this.lbxMainOutput.Size = new System.Drawing.Size(218, 280);
             this.lbxMainOutput.TabIndex = 6;
             // 
-            // dgvMainOutput
+            // lbxMainOutputTime
             // 
-            this.dgvMainOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMainOutput.Location = new System.Drawing.Point(459, 164);
-            this.dgvMainOutput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvMainOutput.Name = "dgvMainOutput";
-            this.dgvMainOutput.RowHeadersWidth = 51;
-            this.dgvMainOutput.RowTemplate.Height = 25;
-            this.dgvMainOutput.Size = new System.Drawing.Size(303, 285);
-            this.dgvMainOutput.TabIndex = 7;
+            this.lbxMainOutputTime.BackColor = System.Drawing.SystemColors.Control;
+            this.lbxMainOutputTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxMainOutputTime.FormattingEnabled = true;
+            this.lbxMainOutputTime.ItemHeight = 20;
+            this.lbxMainOutputTime.Location = new System.Drawing.Point(270, 164);
+            this.lbxMainOutputTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainOutputTime.Name = "lbxMainOutputTime";
+            this.lbxMainOutputTime.Size = new System.Drawing.Size(199, 280);
+            this.lbxMainOutputTime.TabIndex = 7;
+            // 
+            // lbxException
+            // 
+            this.lbxException.BackColor = System.Drawing.SystemColors.Control;
+            this.lbxException.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxException.FormattingEnabled = true;
+            this.lbxException.ItemHeight = 20;
+            this.lbxException.Location = new System.Drawing.Point(46, 13);
+            this.lbxException.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxException.Name = "lbxException";
+            this.lbxException.Size = new System.Drawing.Size(323, 20);
+            this.lbxException.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.dgvMainOutput);
+            this.Controls.Add(this.lbxException);
+            this.Controls.Add(this.lbxMainOutputTime);
             this.Controls.Add(this.lbxMainOutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Von);
@@ -134,7 +148,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMainOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +162,7 @@
         private Label Von;
         private Label label1;
         private ListBox lbxMainOutput;
-        private DataGridView dgvMainOutput;
+        private ListBox lbxMainOutputTime;
+        private ListBox lbxException;
     }
 }

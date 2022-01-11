@@ -11,16 +11,40 @@ namespace EasyTravel
     internal class Search
     {
         ITransport transport = new Transport();
-        private List<string> _searchresults = new List<string>();
-         public List<string> NormalSearch(string from, string to)
+        private List<string> _searchResults = new List<string>();
+        private List<string> _timeResult = new List<string>();
+        public List<string> NormalSearch(string from, string to)
         {
-            var Connections = transport.GetConnections(from, to);
-            foreach (Connection connection in Connections.ConnectionList)
+            if (from.Equals("") || to.Equals("") )
             {
-                _searchresults.Add("Nach: " + connection.To.Station.Name + "\tAbfahrt: "
-                    + connection.From.Departure.Value.ToString("HH:mm"));
+                _searchResults.Add("Start- und Zielort muss angegeben werden.");
             }
-            return _searchresults;
+            else
+            {
+                var Connections = transport.GetConnections(from, to);
+                foreach (Connection connection in Connections.ConnectionList)
+                {
+                    _searchResults.Add("Nach: " + connection.To.Station.Name);
+                }
+            }
+            return _searchResults;
+        }
+        public List<string> TimeSearch(string from, string to)
+        {
+            if (from != "" || to != "")
+            {
+                var Connections = transport.GetConnections(from, to);
+                foreach (Connection connection in Connections.ConnectionList)
+                {
+                    string delay = "";
+                    if(connection.From.Delay > 0)
+                    {
+                        delay = " +" + connection.From.Delay + " min";
+                    }
+                    _timeResult.Add("Abfahrt: " + connection.From.Departure.Value.ToString("HH:mm") + "Uhr" + delay);
+                }
+            }
+            return _timeResult;
         }
     }
 }
