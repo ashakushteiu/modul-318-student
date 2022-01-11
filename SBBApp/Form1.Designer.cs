@@ -38,6 +38,7 @@
             this.lbxMainOutputTime = new System.Windows.Forms.ListBox();
             this.lbxException = new System.Windows.Forms.ListBox();
             this.lbxMainTravelTime = new System.Windows.Forms.ListBox();
+            this.lbxMainTravelDate = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnMainSearch
@@ -105,7 +106,7 @@
             this.lbxMainOutput.Location = new System.Drawing.Point(46, 164);
             this.lbxMainOutput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbxMainOutput.Name = "lbxMainOutput";
-            this.lbxMainOutput.Size = new System.Drawing.Size(218, 280);
+            this.lbxMainOutput.Size = new System.Drawing.Size(158, 280);
             this.lbxMainOutput.TabIndex = 6;
             // 
             // lbxMainOutputTime
@@ -114,10 +115,10 @@
             this.lbxMainOutputTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainOutputTime.FormattingEnabled = true;
             this.lbxMainOutputTime.ItemHeight = 20;
-            this.lbxMainOutputTime.Location = new System.Drawing.Point(270, 164);
+            this.lbxMainOutputTime.Location = new System.Drawing.Point(210, 164);
             this.lbxMainOutputTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbxMainOutputTime.Name = "lbxMainOutputTime";
-            this.lbxMainOutputTime.Size = new System.Drawing.Size(199, 280);
+            this.lbxMainOutputTime.Size = new System.Drawing.Size(142, 280);
             this.lbxMainOutputTime.TabIndex = 7;
             // 
             // lbxException
@@ -138,17 +139,30 @@
             this.lbxMainTravelTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainTravelTime.FormattingEnabled = true;
             this.lbxMainTravelTime.ItemHeight = 20;
-            this.lbxMainTravelTime.Location = new System.Drawing.Point(485, 164);
+            this.lbxMainTravelTime.Location = new System.Drawing.Point(383, 164);
             this.lbxMainTravelTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbxMainTravelTime.Name = "lbxMainTravelTime";
-            this.lbxMainTravelTime.Size = new System.Drawing.Size(199, 280);
+            this.lbxMainTravelTime.Size = new System.Drawing.Size(239, 280);
             this.lbxMainTravelTime.TabIndex = 9;
+            // 
+            // lbxMainTravelDate
+            // 
+            this.lbxMainTravelDate.BackColor = System.Drawing.SystemColors.Control;
+            this.lbxMainTravelDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxMainTravelDate.FormattingEnabled = true;
+            this.lbxMainTravelDate.ItemHeight = 20;
+            this.lbxMainTravelDate.Location = new System.Drawing.Point(750, 164);
+            this.lbxMainTravelDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainTravelDate.Name = "lbxMainTravelDate";
+            this.lbxMainTravelDate.Size = new System.Drawing.Size(152, 280);
+            this.lbxMainTravelDate.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.lbxMainTravelDate);
             this.Controls.Add(this.lbxMainTravelTime);
             this.Controls.Add(this.lbxException);
             this.Controls.Add(this.lbxMainOutputTime);
@@ -179,5 +193,6 @@
         private ListBox lbxMainOutputTime;
         private ListBox lbxException;
         private ListBox lbxMainTravelTime;
+        private ListBox lbxMainTravelDate;
     }
 }

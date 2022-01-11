@@ -14,6 +14,7 @@ namespace EasyTravel
         private List<string> _searchResults = new List<string>();
         private List<string> _timeResult = new List<string>();
         private List<string> _travelTime = new List<string>();
+        private List<string> _travelDate = new List<string>();
         public List<string> NormalSearch(string from, string to)
         {
             if (from.Equals("") || to.Equals("") )
@@ -55,10 +56,23 @@ namespace EasyTravel
                 var Connections = transport.GetConnections(from, to);
                 foreach (Connection connection in Connections.ConnectionList)
                 {
-                    _travelTime.Add("Ankunft: " + connection.To.Arrival.Value.ToString("dd.MM.yy HH:mm") + "Uhr");
+                    _travelTime.Add("Ankunft: " + connection.To.Arrival.Value.ToString("HH:mm") + "Uhr");
                 }
             }
             return _travelTime;
+        }
+
+        public List<string> TravelDate(string from, string to)
+        {
+            if (from != "" || to != "")
+            {
+                var Connections = transport.GetConnections(from, to);
+                foreach (Connection connection in Connections.ConnectionList)
+                {
+                    _travelDate.Add("Datum: " + connection.From.Departure.Value.ToString("dd.MM.yyyy"));
+                }
+            }
+            return _travelDate;
         }
     }
 }
