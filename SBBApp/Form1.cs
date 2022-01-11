@@ -13,8 +13,10 @@ namespace EasyTravel
 
         private void btnMainSearch_Click(object sender, EventArgs e)
         {
+            lbxMainOutput.Items.Clear();
             List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
             lbxMainOutput.Items.AddRange(resultSearch.ToArray());
+            resultSearch.Clear();
         }
 
         private void btnMainSearchChange_Click(object sender, EventArgs e)
