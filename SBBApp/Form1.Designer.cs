@@ -37,6 +37,7 @@
             this.lbxMainOutput = new System.Windows.Forms.ListBox();
             this.lbxMainOutputTime = new System.Windows.Forms.ListBox();
             this.lbxException = new System.Windows.Forms.ListBox();
+            this.lbxMainTravelTime = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnMainSearch
@@ -131,11 +132,24 @@
             this.lbxException.Size = new System.Drawing.Size(323, 20);
             this.lbxException.TabIndex = 8;
             // 
+            // lbxMainTravelTime
+            // 
+            this.lbxMainTravelTime.BackColor = System.Drawing.SystemColors.Control;
+            this.lbxMainTravelTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxMainTravelTime.FormattingEnabled = true;
+            this.lbxMainTravelTime.ItemHeight = 20;
+            this.lbxMainTravelTime.Location = new System.Drawing.Point(485, 164);
+            this.lbxMainTravelTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainTravelTime.Name = "lbxMainTravelTime";
+            this.lbxMainTravelTime.Size = new System.Drawing.Size(199, 280);
+            this.lbxMainTravelTime.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.lbxMainTravelTime);
             this.Controls.Add(this.lbxException);
             this.Controls.Add(this.lbxMainOutputTime);
             this.Controls.Add(this.lbxMainOutput);
@@ -164,5 +178,6 @@
         private ListBox lbxMainOutput;
         private ListBox lbxMainOutputTime;
         private ListBox lbxException;
+        private ListBox lbxMainTravelTime;
     }
 }
