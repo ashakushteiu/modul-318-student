@@ -1,10 +1,11 @@
 using SwissTransport.Core;
 using SwissTransport.Models;
 
-namespace SBBApp
+namespace EasyTravel
 {
     public partial class Form1 : Form
     {
+        Search search = new Search();
         public Form1()
         {
             InitializeComponent();
@@ -12,14 +13,16 @@ namespace SBBApp
 
         private void btnMainSearch_Click(object sender, EventArgs e)
         {
-            var transport = new Transport();
-            var Connections = transport.GetConnections("Emmen", "Willisau");
+            List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
+            lbxMainOutput.Items.AddRange(resultSearch.ToArray());
+        }
 
-            foreach (Connection connection in Connections.ConnectionList)
-            {
-                //lbxMainOutput.Items.Add(connection.From.Departure);
-            }
-            lbxMainOutput.Items.Add("Test");
+        private void btnMainSearchChange_Click(object sender, EventArgs e)
+        {
+            string _fromText = tbxMainSearchFrom.Text;
+            string _toText = tbxMainSearchTo.Text;
+            tbxMainSearchTo.Text = _fromText;
+            tbxMainSearchFrom.Text = _toText;
         }
     }
 }

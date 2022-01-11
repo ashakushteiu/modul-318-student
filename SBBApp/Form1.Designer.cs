@@ -1,4 +1,4 @@
-﻿namespace SBBApp
+﻿namespace EasyTravel
 {
     partial class Form1
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnMainSearch = new System.Windows.Forms.Button();
-            this.btnMain = new System.Windows.Forms.Button();
-            this.tbxMainSearch = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnMainSearchChange = new System.Windows.Forms.Button();
+            this.tbxMainSearchFrom = new System.Windows.Forms.TextBox();
+            this.tbxMainSearchTo = new System.Windows.Forms.TextBox();
             this.Von = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbxMainOutput = new System.Windows.Forms.ListBox();
@@ -49,28 +49,29 @@
             this.btnMainSearch.UseVisualStyleBackColor = true;
             this.btnMainSearch.Click += new System.EventHandler(this.btnMainSearch_Click);
             // 
-            // btnMain
+            // btnMainSearchChange
             // 
-            this.btnMain.Location = new System.Drawing.Point(233, 76);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(75, 24);
-            this.btnMain.TabIndex = 1;
-            this.btnMain.Text = "button2";
-            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMainSearchChange.Location = new System.Drawing.Point(233, 76);
+            this.btnMainSearchChange.Name = "btnMainSearchChange";
+            this.btnMainSearchChange.Size = new System.Drawing.Size(75, 24);
+            this.btnMainSearchChange.TabIndex = 1;
+            this.btnMainSearchChange.Text = "Tauschen";
+            this.btnMainSearchChange.UseVisualStyleBackColor = true;
+            this.btnMainSearchChange.Click += new System.EventHandler(this.btnMainSearchChange_Click);
             // 
-            // tbxMainSearch
+            // tbxMainSearchFrom
             // 
-            this.tbxMainSearch.Location = new System.Drawing.Point(113, 34);
-            this.tbxMainSearch.Name = "tbxMainSearch";
-            this.tbxMainSearch.Size = new System.Drawing.Size(100, 23);
-            this.tbxMainSearch.TabIndex = 2;
+            this.tbxMainSearchFrom.Location = new System.Drawing.Point(113, 34);
+            this.tbxMainSearchFrom.Name = "tbxMainSearchFrom";
+            this.tbxMainSearchFrom.Size = new System.Drawing.Size(100, 23);
+            this.tbxMainSearchFrom.TabIndex = 2;
             // 
-            // textBox2
+            // tbxMainSearchTo
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 3;
+            this.tbxMainSearchTo.Location = new System.Drawing.Point(113, 76);
+            this.tbxMainSearchTo.Name = "tbxMainSearchTo";
+            this.tbxMainSearchTo.Size = new System.Drawing.Size(100, 23);
+            this.tbxMainSearchTo.TabIndex = 3;
             // 
             // Von
             // 
@@ -117,9 +118,9 @@
             this.Controls.Add(this.lbxMainOutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Von);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.tbxMainSearch);
-            this.Controls.Add(this.btnMain);
+            this.Controls.Add(this.tbxMainSearchTo);
+            this.Controls.Add(this.tbxMainSearchFrom);
+            this.Controls.Add(this.btnMainSearchChange);
             this.Controls.Add(this.btnMainSearch);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -132,9 +133,9 @@
         #endregion
 
         private Button btnMainSearch;
-        private Button btnMain;
-        private TextBox tbxMainSearch;
-        private TextBox textBox2;
+        private Button btnMainSearchChange;
+        private TextBox tbxMainSearchFrom;
+        private TextBox tbxMainSearchTo;
         private Label Von;
         private Label label1;
         private ListBox lbxMainOutput;

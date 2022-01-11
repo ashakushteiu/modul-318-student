@@ -1,4 +1,4 @@
-namespace SBBApp
+namespace EasyTravel
 {
     internal static class Program
     {
