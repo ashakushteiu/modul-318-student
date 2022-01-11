@@ -13,7 +13,7 @@ namespace EasyTravel
 
         private void btnMainSearch_Click(object sender, EventArgs e)
         {
-            clearAllListBox();
+            ClearAllListBox();
             List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
             List<string> timeSearch = search.TimeSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
             List<string> travelTime = search.TravelTime(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
@@ -23,7 +23,7 @@ namespace EasyTravel
                 lbxException.Items.AddRange(resultSearch.ToArray());
             }
             else
-            {   
+            {
                 lbxMainOutput.Items.AddRange(resultSearch.ToArray());
                 lbxMainOutputTime.Items.AddRange(timeSearch.ToArray());
                 lbxMainTravelTime.Items.AddRange(travelTime.ToArray());
@@ -43,49 +43,69 @@ namespace EasyTravel
             tbxMainSearchFrom.Text = _toText;
         }
 
-        public void clearAllListBox()
+        public void ClearAllListBox()
         {
             lbxException.Items.Clear();
             lbxMainOutput.Items.Clear();
             lbxMainOutputTime.Items.Clear();
             lbxMainTravelTime.Items.Clear();
+            lbxMainTravelDate.Items.Clear();
         }
 
-        private void TextBoxAutocompleteAndDropdown(object sender, KeyEventArgs e)
+        private void DropDownFrom(object sender, EventArgs e)
         {
-            string vonStation = tbxMainSearchFrom.Text;
-            string nachStation = tbxMainSearchTo.Text;
-
-
-
-            if (vonStation != "")
+            if (tbxMainSearchFrom.Text.Length >= 3)
             {
-                var stationen = transport.GetStations(vonStation).StationList;
-
-
-
-                if (stationen.Count > 0)
+                tbxMainSearchFrom.Items.Clear();
+                tbxMainSearchFrom.Items.Add(tbxMainSearchFrom.Text);
+                ITransport transport = new Transport();
+                Stations stations = new Stations();
+                stations = transport.GetStations(tbxMainSearchFrom.Text);
+                for (int i = 0; i < stations.StationList.Count; i++)
                 {
-                    txtFahrplanStartstation.Items.Clear();
-                    foreach (Station station in stationen)
-                    {
-                        if (!string.IsNullOrEmpty(station.Name))
-                        {
-                            txtFahrplanStartstation.Items.Add(station.Name);
-                            txtFahrplanStartstation.SelectionStart = vonStation.Length;
-                        }
-                    }
+                    tbxMainSearchFrom.Items.Add(stations.StationList[i].Name);
                 }
             }
+        }
 
-            if (vonStation != "" && nachStation != "")
+        private void DropDownTo(object sender, EventArgs e)
+        {
+            if (tbxMainSearchTo.Text.Length >= 3)
             {
-                btnFahrplanSuche.Enabled = true;
+                tbxMainSearchTo.Items.Clear();
+                tbxMainSearchTo.Items.Add(tbxMainSearchTo.Text);
+                ITransport transport = new Transport();
+                Stations stations = new Stations();
+                stations = transport.GetStations(tbxMainSearchTo.Text);
+                for (int i = 0; i < stations.StationList.Count; i++)
+                {
+                    tbxMainSearchTo.Items.Add(stations.StationList[i].Name);
+                }
             }
-            else
+        }
+
+        private void DropDownTimetable(object sender, EventArgs e)
+        {
+            if (tbxMainTimetable.Text.Length >= 3)
             {
-                btnFahrplanSuche.Enabled = false;
+                tbxMainTimetable.Items.Clear();
+                tbxMainTimetable.Items.Add(tbxMainTimetable.Text);
+                ITransport transport = new Transport();
+                Stations stations = new Stations();
+                stations = transport.GetStations(tbxMainTimetable.Text);
+                for (int i = 0; i < stations.StationList.Count; i++)
+                {
+                    tbxMainTimetable.Items.Add(stations.StationList[i].Name);
+                }
             }
+        }
+
+        private void btnMainTimetableSearch_Click(object sender, EventArgs e)
+        {
+            ClearAllListBox();
+            List<string> timetableTo = search.TimeTableTo(tbxMainTimetable.Text);
+            lbxMainOutput.Items.AddRange(timetableTo.ToArray());
+            timetableTo.Clear();
         }
     }
 }

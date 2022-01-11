@@ -15,6 +15,8 @@ namespace EasyTravel
         private List<string> _timeResult = new List<string>();
         private List<string> _travelTime = new List<string>();
         private List<string> _travelDate = new List<string>();
+        private List<string> _timetableTo = new List<string>();
+        private List<string> _timetableWhen = new List<string>();
         public List<string> NormalSearch(string from, string to)
         {
             if (from.Equals("") || to.Equals("") )
@@ -73,6 +75,16 @@ namespace EasyTravel
                 }
             }
             return _travelDate;
+        }
+
+        public List<string> TimeTableTo(string station)
+        {
+            var timetable = transport.GetStationBoard(station, "id");
+            foreach(StationBoard stationBoard in timetable.Entries)
+            {
+                _timetableTo.Add("Nach: " + stationBoard.To);
+            }
+            return _timetableTo;
         }
     }
 }
