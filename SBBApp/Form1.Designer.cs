@@ -34,6 +34,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Von = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbxMainOutput = new System.Windows.Forms.ListBox();
+            this.dgvMainOutput = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainOutput)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMainSearch
@@ -42,7 +45,7 @@
             this.btnMainSearch.Name = "btnMainSearch";
             this.btnMainSearch.Size = new System.Drawing.Size(75, 23);
             this.btnMainSearch.TabIndex = 0;
-            this.btnMainSearch.Text = "button1";
+            this.btnMainSearch.Text = "Suchen";
             this.btnMainSearch.UseVisualStyleBackColor = true;
             this.btnMainSearch.Click += new System.EventHandler(this.btnMainSearch_Click);
             // 
@@ -87,11 +90,31 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Nach:";
             // 
+            // lbxMainOutput
+            // 
+            this.lbxMainOutput.FormattingEnabled = true;
+            this.lbxMainOutput.ItemHeight = 15;
+            this.lbxMainOutput.Location = new System.Drawing.Point(40, 123);
+            this.lbxMainOutput.Name = "lbxMainOutput";
+            this.lbxMainOutput.Size = new System.Drawing.Size(268, 214);
+            this.lbxMainOutput.TabIndex = 6;
+            // 
+            // dgvMainOutput
+            // 
+            this.dgvMainOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMainOutput.Location = new System.Drawing.Point(402, 123);
+            this.dgvMainOutput.Name = "dgvMainOutput";
+            this.dgvMainOutput.RowTemplate.Height = 25;
+            this.dgvMainOutput.Size = new System.Drawing.Size(265, 214);
+            this.dgvMainOutput.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvMainOutput);
+            this.Controls.Add(this.lbxMainOutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Von);
             this.Controls.Add(this.textBox2);
@@ -100,6 +123,7 @@
             this.Controls.Add(this.btnMainSearch);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMainOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +137,7 @@
         private TextBox textBox2;
         private Label Von;
         private Label label1;
+        private ListBox lbxMainOutput;
+        private DataGridView dgvMainOutput;
     }
 }
