@@ -50,5 +50,42 @@ namespace EasyTravel
             lbxMainOutputTime.Items.Clear();
             lbxMainTravelTime.Items.Clear();
         }
+
+        private void TextBoxAutocompleteAndDropdown(object sender, KeyEventArgs e)
+        {
+            string vonStation = tbxMainSearchFrom.Text;
+            string nachStation = tbxMainSearchTo.Text;
+
+
+
+            if (vonStation != "")
+            {
+                var stationen = transport.GetStations(vonStation).StationList;
+
+
+
+                if (stationen.Count > 0)
+                {
+                    txtFahrplanStartstation.Items.Clear();
+                    foreach (Station station in stationen)
+                    {
+                        if (!string.IsNullOrEmpty(station.Name))
+                        {
+                            txtFahrplanStartstation.Items.Add(station.Name);
+                            txtFahrplanStartstation.SelectionStart = vonStation.Length;
+                        }
+                    }
+                }
+            }
+
+            if (vonStation != "" && nachStation != "")
+            {
+                btnFahrplanSuche.Enabled = true;
+            }
+            else
+            {
+                btnFahrplanSuche.Enabled = false;
+            }
+        }
     }
 }
