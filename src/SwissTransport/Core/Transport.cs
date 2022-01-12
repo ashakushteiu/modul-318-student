@@ -29,29 +29,35 @@
                 .GetAwaiter()
                 .GetResult();
 
-        public async Task<StationBoardRoot> GetStationBoardAsync(string station, string id)
+        public async Task<StationBoardRoot> GetStationBoardAsync(string station, string id, int limit)
         {
             if (string.IsNullOrEmpty(station))
             {
                 throw new ArgumentNullException(nameof(station));
             }
 
+
+
             if (string.IsNullOrEmpty(id))
             {
                 throw new ArgumentNullException(nameof(id));
             }
 
-            var uri = new Uri($"{WebApiHost}stationboard?station={station}&id={id}");
+
+
+            var uri = new Uri($"{WebApiHost}stationboard?station={station}&id={id}&limit={limit}");
             return await this
-                .GetObjectAsync<StationBoardRoot>(uri)
-                .ConfigureAwait(false);
+            .GetObjectAsync<StationBoardRoot>(uri)
+            .ConfigureAwait(false);
         }
 
-        public StationBoardRoot GetStationBoard(string station, string id) =>
-            this.GetStationBoardAsync(station, id)
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult();
+
+
+        public StationBoardRoot GetStationBoard(string station, string id, int limit) =>
+        this.GetStationBoardAsync(station, id, limit)
+        .ConfigureAwait(false)
+        .GetAwaiter()
+        .GetResult();
 
         public async Task<Connections> GetConnectionsAsync(string fromStation, string toStation)
         {

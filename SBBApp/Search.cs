@@ -79,10 +79,12 @@ namespace EasyTravel
 
         public List<string> TimeTableTo(string station)
         {
-            var timetable = transport.GetStationBoard(station, "id");
-            foreach(StationBoard stationBoard in timetable.Entries)
+            StationBoardRoot timetable = transport.GetStationBoard(station, "id", 8);
+            foreach (StationBoard stationBoard in timetable.Entries)
             {
-                _timetableTo.Add("Nach: " + stationBoard.To);
+                var Connections = transport.GetConnections(station, stationBoard.To);
+                Connections.ConnectionList.First();
+                _timetableTo.Add("Nach: " + stationBoard.To + "\tFährt um: " + Connections.ConnectionList.First().From.Departure.Value.ToString("HH:mm"));
             }
             return _timetableTo;
         }
