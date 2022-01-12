@@ -149,6 +149,7 @@
             this.tbxMainSearchFrom.Size = new System.Drawing.Size(196, 23);
             this.tbxMainSearchFrom.TabIndex = 11;
             this.tbxMainSearchFrom.DropDown += new System.EventHandler(this.DropDownFrom);
+            this.tbxMainSearchFrom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbxMainSearchKeyPress);
             // 
             // tbxMainSearchTo
             // 
@@ -160,6 +161,7 @@
             this.tbxMainSearchTo.Size = new System.Drawing.Size(196, 23);
             this.tbxMainSearchTo.TabIndex = 12;
             this.tbxMainSearchTo.DropDown += new System.EventHandler(this.DropDownTo);
+            this.tbxMainSearchTo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbxMainSearchKeyPress);
             // 
             // label2
             // 
@@ -180,6 +182,7 @@
             this.tbxMainTimetable.Size = new System.Drawing.Size(163, 23);
             this.tbxMainTimetable.TabIndex = 14;
             this.tbxMainTimetable.DropDown += new System.EventHandler(this.DropDownTimetable);
+            this.tbxMainTimetable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbxMainTimetableKeyPress);
             // 
             // btnMainTimetableSearch
             // 

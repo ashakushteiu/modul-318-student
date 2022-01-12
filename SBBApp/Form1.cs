@@ -122,5 +122,29 @@ namespace EasyTravel
             lbxMainStationBoard.Items.AddRange(timetableTo.ToArray());
             timetableTo.Clear();
         }
+
+        private void TbxMainSearchKeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnMainSearch_Click(this, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void TbxMainTimetableKeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnMainTimetableSearch_Click(this, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Environment.Exit(0);
+            }
+        }
     }
 }
