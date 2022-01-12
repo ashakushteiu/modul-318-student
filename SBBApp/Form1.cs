@@ -120,6 +120,8 @@ namespace EasyTravel
             {
                 ClearAllListBoxAndBringToFront();
                 lbxMainStationBoard.BringToFront();
+                DropDownTimetable(sender, e);
+                tbxMainTimetable.SelectedIndex = 1;
                 List<string> timetableTo = search.TimeTableTo(tbxMainTimetable.Text);
                 lbxMainStationBoard.Items.AddRange(timetableTo.ToArray());
                 timetableTo.Clear();
