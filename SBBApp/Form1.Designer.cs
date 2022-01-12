@@ -102,7 +102,7 @@
             this.lbxMainOutputTime.ItemHeight = 15;
             this.lbxMainOutputTime.Location = new System.Drawing.Point(227, 123);
             this.lbxMainOutputTime.Name = "lbxMainOutputTime";
-            this.lbxMainOutputTime.Size = new System.Drawing.Size(124, 315);
+            this.lbxMainOutputTime.Size = new System.Drawing.Size(138, 315);
             this.lbxMainOutputTime.TabIndex = 7;
             // 
             // lbxException
@@ -122,7 +122,7 @@
             this.lbxMainTravelTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainTravelTime.FormattingEnabled = true;
             this.lbxMainTravelTime.ItemHeight = 15;
-            this.lbxMainTravelTime.Location = new System.Drawing.Point(356, 123);
+            this.lbxMainTravelTime.Location = new System.Drawing.Point(371, 123);
             this.lbxMainTravelTime.Name = "lbxMainTravelTime";
             this.lbxMainTravelTime.Size = new System.Drawing.Size(198, 315);
             this.lbxMainTravelTime.TabIndex = 9;

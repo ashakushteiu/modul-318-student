@@ -15,25 +15,33 @@ namespace EasyTravel
         {
             lbxMainStationBoard.Hide();
             ClearAllListBoxAndBringToFront();
-            List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
-            List<string> timeSearch = search.TimeSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
-            List<string> travelTime = search.TravelTime(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
-            List<string> travelDate = search.TravelDate(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
-            if (resultSearch.Count == 1)
+            DropDownFrom(sender, e);
+            DropDownTo(sender, e);
+            if (tbxMainSearchFrom.Text.Length >= 3 && tbxMainSearchTo.Text.Length >= 3)
             {
-                lbxException.Items.AddRange(resultSearch.ToArray());
+                tbxMainSearchFrom.SelectedIndex = 1;
+                tbxMainSearchTo.SelectedIndex = 1;
+                List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
+                List<string> timeSearch = search.TimeSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
+                List<string> travelTime = search.TravelTime(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
+                List<string> travelDate = search.TravelDate(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
+                if (resultSearch.Count == 1)
+                {
+                    lbxException.Items.AddRange(resultSearch.ToArray());
+                }
+                else
+                {
+                    lbxMainOutput.Items.AddRange(resultSearch.ToArray());
+                    lbxMainOutputTime.Items.AddRange(timeSearch.ToArray());
+                    lbxMainTravelTime.Items.AddRange(travelTime.ToArray());
+                    lbxMainTravelDate.Items.AddRange(travelDate.ToArray());
+                }
+
+                resultSearch.Clear();
+                timeSearch.Clear();
+                travelTime.Clear();
+                travelDate.Clear();
             }
-            else
-            {
-                lbxMainOutput.Items.AddRange(resultSearch.ToArray());
-                lbxMainOutputTime.Items.AddRange(timeSearch.ToArray());
-                lbxMainTravelTime.Items.AddRange(travelTime.ToArray());
-                lbxMainTravelDate.Items.AddRange(travelDate.ToArray());
-            }
-            resultSearch.Clear();
-            timeSearch.Clear();
-            travelTime.Clear();
-            travelDate.Clear();
         }
 
         private void btnMainSearchChange_Click(object sender, EventArgs e)
