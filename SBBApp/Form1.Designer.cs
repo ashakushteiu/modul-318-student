@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbxMainOutput = new System.Windows.Forms.ListBox();
             this.lbxMainOutputTime = new System.Windows.Forms.ListBox();
-            this.lbxException = new System.Windows.Forms.ListBox();
             this.lbxMainTravelTime = new System.Windows.Forms.ListBox();
             this.lbxMainTravelDate = new System.Windows.Forms.ListBox();
             this.tbxMainSearchFrom = new System.Windows.Forms.ComboBox();
@@ -104,17 +103,6 @@
             this.lbxMainOutputTime.Name = "lbxMainOutputTime";
             this.lbxMainOutputTime.Size = new System.Drawing.Size(138, 315);
             this.lbxMainOutputTime.TabIndex = 7;
-            // 
-            // lbxException
-            // 
-            this.lbxException.BackColor = System.Drawing.SystemColors.Control;
-            this.lbxException.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbxException.FormattingEnabled = true;
-            this.lbxException.ItemHeight = 15;
-            this.lbxException.Location = new System.Drawing.Point(40, 10);
-            this.lbxException.Name = "lbxException";
-            this.lbxException.Size = new System.Drawing.Size(283, 15);
-            this.lbxException.TabIndex = 8;
             // 
             // lbxMainTravelTime
             // 
@@ -217,7 +205,6 @@
             this.Controls.Add(this.tbxMainSearchFrom);
             this.Controls.Add(this.lbxMainTravelDate);
             this.Controls.Add(this.lbxMainTravelTime);
-            this.Controls.Add(this.lbxException);
             this.Controls.Add(this.lbxMainOutputTime);
             this.Controls.Add(this.lbxMainOutput);
             this.Controls.Add(this.label1);
@@ -240,7 +227,6 @@
         private Label label1;
         private ListBox lbxMainOutput;
         private ListBox lbxMainOutputTime;
-        private ListBox lbxException;
         private ListBox lbxMainTravelTime;
         private ListBox lbxMainTravelDate;
         private ComboBox tbxMainSearchFrom;

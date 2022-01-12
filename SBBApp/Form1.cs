@@ -25,17 +25,11 @@ namespace EasyTravel
                 List<string> timeSearch = search.TimeSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
                 List<string> travelTime = search.TravelTime(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
                 List<string> travelDate = search.TravelDate(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
-                if (resultSearch.Count == 1)
-                {
-                    lbxException.Items.AddRange(resultSearch.ToArray());
-                }
-                else
-                {
-                    lbxMainOutput.Items.AddRange(resultSearch.ToArray());
-                    lbxMainOutputTime.Items.AddRange(timeSearch.ToArray());
-                    lbxMainTravelTime.Items.AddRange(travelTime.ToArray());
-                    lbxMainTravelDate.Items.AddRange(travelDate.ToArray());
-                }
+                
+                lbxMainOutput.Items.AddRange(resultSearch.ToArray());
+                lbxMainOutputTime.Items.AddRange(timeSearch.ToArray());
+                lbxMainTravelTime.Items.AddRange(travelTime.ToArray());
+                lbxMainTravelDate.Items.AddRange(travelDate.ToArray());
 
                 resultSearch.Clear();
                 timeSearch.Clear();
@@ -54,7 +48,6 @@ namespace EasyTravel
 
         public void ClearAllListBoxAndBringToFront()
         {
-            lbxException.Items.Clear();
             lbxMainOutput.Items.Clear();
             lbxMainOutput.BringToFront();
             lbxMainOutputTime.Items.Clear();
