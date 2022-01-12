@@ -13,7 +13,8 @@ namespace EasyTravel
 
         private void btnMainSearch_Click(object sender, EventArgs e)
         {
-            ClearAllListBox();
+            lbxMainStationBoard.Hide();
+            ClearAllListBoxAndBringToFront();
             List<string> resultSearch = search.NormalSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
             List<string> timeSearch = search.TimeSearch(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
             List<string> travelTime = search.TravelTime(tbxMainSearchFrom.Text, tbxMainSearchTo.Text);
@@ -43,13 +44,18 @@ namespace EasyTravel
             tbxMainSearchFrom.Text = _toText;
         }
 
-        public void ClearAllListBox()
+        public void ClearAllListBoxAndBringToFront()
         {
             lbxException.Items.Clear();
             lbxMainOutput.Items.Clear();
+            lbxMainOutput.BringToFront();
             lbxMainOutputTime.Items.Clear();
+            lbxMainOutputTime.BringToFront();
             lbxMainTravelTime.Items.Clear();
+            lbxMainTravelTime.BringToFront();
             lbxMainTravelDate.Items.Clear();
+            lbxMainTravelDate.BringToFront();
+            lbxMainStationBoard.Items.Clear();
         }
 
         private void DropDownFrom(object sender, EventArgs e)
@@ -102,9 +108,10 @@ namespace EasyTravel
 
         private void btnMainTimetableSearch_Click(object sender, EventArgs e)
         {
-            ClearAllListBox();
+            ClearAllListBoxAndBringToFront();
+            lbxMainStationBoard.BringToFront();
             List<string> timetableTo = search.TimeTableTo(tbxMainTimetable.Text);
-            lbxMainOutput.Items.AddRange(timetableTo.ToArray());
+            lbxMainStationBoard.Items.AddRange(timetableTo.ToArray());
             timetableTo.Clear();
         }
     }

@@ -42,14 +42,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxMainTimetable = new System.Windows.Forms.ComboBox();
             this.btnMainTimetableSearch = new System.Windows.Forms.Button();
+            this.lbxMainStationBoard = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnMainSearch
             // 
-            this.btnMainSearch.Location = new System.Drawing.Point(349, 45);
-            this.btnMainSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMainSearch.Location = new System.Drawing.Point(305, 34);
             this.btnMainSearch.Name = "btnMainSearch";
-            this.btnMainSearch.Size = new System.Drawing.Size(86, 31);
+            this.btnMainSearch.Size = new System.Drawing.Size(75, 23);
             this.btnMainSearch.TabIndex = 0;
             this.btnMainSearch.Text = "Suchen";
             this.btnMainSearch.UseVisualStyleBackColor = true;
@@ -57,10 +57,9 @@
             // 
             // btnMainSearchChange
             // 
-            this.btnMainSearchChange.Location = new System.Drawing.Point(349, 98);
-            this.btnMainSearchChange.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMainSearchChange.Location = new System.Drawing.Point(305, 74);
             this.btnMainSearchChange.Name = "btnMainSearchChange";
-            this.btnMainSearchChange.Size = new System.Drawing.Size(86, 32);
+            this.btnMainSearchChange.Size = new System.Drawing.Size(75, 24);
             this.btnMainSearchChange.TabIndex = 1;
             this.btnMainSearchChange.Text = "Tauschen";
             this.btnMainSearchChange.UseVisualStyleBackColor = true;
@@ -69,18 +68,18 @@
             // Von
             // 
             this.Von.AutoSize = true;
-            this.Von.Location = new System.Drawing.Point(46, 49);
+            this.Von.Location = new System.Drawing.Point(40, 37);
             this.Von.Name = "Von";
-            this.Von.Size = new System.Drawing.Size(37, 20);
+            this.Von.Size = new System.Drawing.Size(30, 15);
             this.Von.TabIndex = 4;
             this.Von.Text = "Von:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 104);
+            this.label1.Location = new System.Drawing.Point(40, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nach:";
             // 
@@ -89,11 +88,10 @@
             this.lbxMainOutput.BackColor = System.Drawing.SystemColors.Control;
             this.lbxMainOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainOutput.FormattingEnabled = true;
-            this.lbxMainOutput.ItemHeight = 20;
-            this.lbxMainOutput.Location = new System.Drawing.Point(46, 164);
-            this.lbxMainOutput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainOutput.ItemHeight = 15;
+            this.lbxMainOutput.Location = new System.Drawing.Point(40, 123);
             this.lbxMainOutput.Name = "lbxMainOutput";
-            this.lbxMainOutput.Size = new System.Drawing.Size(207, 420);
+            this.lbxMainOutput.Size = new System.Drawing.Size(181, 315);
             this.lbxMainOutput.TabIndex = 6;
             // 
             // lbxMainOutputTime
@@ -101,11 +99,10 @@
             this.lbxMainOutputTime.BackColor = System.Drawing.SystemColors.Control;
             this.lbxMainOutputTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainOutputTime.FormattingEnabled = true;
-            this.lbxMainOutputTime.ItemHeight = 20;
-            this.lbxMainOutputTime.Location = new System.Drawing.Point(259, 164);
-            this.lbxMainOutputTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainOutputTime.ItemHeight = 15;
+            this.lbxMainOutputTime.Location = new System.Drawing.Point(227, 123);
             this.lbxMainOutputTime.Name = "lbxMainOutputTime";
-            this.lbxMainOutputTime.Size = new System.Drawing.Size(142, 420);
+            this.lbxMainOutputTime.Size = new System.Drawing.Size(124, 315);
             this.lbxMainOutputTime.TabIndex = 7;
             // 
             // lbxException
@@ -113,11 +110,10 @@
             this.lbxException.BackColor = System.Drawing.SystemColors.Control;
             this.lbxException.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxException.FormattingEnabled = true;
-            this.lbxException.ItemHeight = 20;
-            this.lbxException.Location = new System.Drawing.Point(46, 13);
-            this.lbxException.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxException.ItemHeight = 15;
+            this.lbxException.Location = new System.Drawing.Point(40, 10);
             this.lbxException.Name = "lbxException";
-            this.lbxException.Size = new System.Drawing.Size(323, 20);
+            this.lbxException.Size = new System.Drawing.Size(283, 15);
             this.lbxException.TabIndex = 8;
             // 
             // lbxMainTravelTime
@@ -125,11 +121,10 @@
             this.lbxMainTravelTime.BackColor = System.Drawing.SystemColors.Control;
             this.lbxMainTravelTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainTravelTime.FormattingEnabled = true;
-            this.lbxMainTravelTime.ItemHeight = 20;
-            this.lbxMainTravelTime.Location = new System.Drawing.Point(407, 164);
-            this.lbxMainTravelTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainTravelTime.ItemHeight = 15;
+            this.lbxMainTravelTime.Location = new System.Drawing.Point(356, 123);
             this.lbxMainTravelTime.Name = "lbxMainTravelTime";
-            this.lbxMainTravelTime.Size = new System.Drawing.Size(226, 420);
+            this.lbxMainTravelTime.Size = new System.Drawing.Size(198, 315);
             this.lbxMainTravelTime.TabIndex = 9;
             // 
             // lbxMainTravelDate
@@ -137,21 +132,21 @@
             this.lbxMainTravelDate.BackColor = System.Drawing.SystemColors.Control;
             this.lbxMainTravelDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbxMainTravelDate.FormattingEnabled = true;
-            this.lbxMainTravelDate.ItemHeight = 20;
-            this.lbxMainTravelDate.Location = new System.Drawing.Point(750, 164);
-            this.lbxMainTravelDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lbxMainTravelDate.ItemHeight = 15;
+            this.lbxMainTravelDate.Location = new System.Drawing.Point(656, 123);
             this.lbxMainTravelDate.Name = "lbxMainTravelDate";
             this.lbxMainTravelDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbxMainTravelDate.Size = new System.Drawing.Size(152, 420);
+            this.lbxMainTravelDate.Size = new System.Drawing.Size(133, 315);
             this.lbxMainTravelDate.TabIndex = 10;
             // 
             // tbxMainSearchFrom
             // 
             this.tbxMainSearchFrom.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tbxMainSearchFrom.FormattingEnabled = true;
-            this.tbxMainSearchFrom.Location = new System.Drawing.Point(98, 49);
+            this.tbxMainSearchFrom.Location = new System.Drawing.Point(86, 37);
+            this.tbxMainSearchFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxMainSearchFrom.Name = "tbxMainSearchFrom";
-            this.tbxMainSearchFrom.Size = new System.Drawing.Size(223, 28);
+            this.tbxMainSearchFrom.Size = new System.Drawing.Size(196, 23);
             this.tbxMainSearchFrom.TabIndex = 11;
             this.tbxMainSearchFrom.DropDown += new System.EventHandler(this.DropDownFrom);
             // 
@@ -159,18 +154,19 @@
             // 
             this.tbxMainSearchTo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tbxMainSearchTo.FormattingEnabled = true;
-            this.tbxMainSearchTo.Location = new System.Drawing.Point(98, 98);
+            this.tbxMainSearchTo.Location = new System.Drawing.Point(86, 74);
+            this.tbxMainSearchTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxMainSearchTo.Name = "tbxMainSearchTo";
-            this.tbxMainSearchTo.Size = new System.Drawing.Size(223, 28);
+            this.tbxMainSearchTo.Size = new System.Drawing.Size(196, 23);
             this.tbxMainSearchTo.TabIndex = 12;
             this.tbxMainSearchTo.DropDown += new System.EventHandler(this.DropDownTo);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 52);
+            this.label2.Location = new System.Drawing.Point(400, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
+            this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Stations Fahrplan:";
             // 
@@ -178,28 +174,39 @@
             // 
             this.tbxMainTimetable.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tbxMainTimetable.FormattingEnabled = true;
-            this.tbxMainTimetable.Location = new System.Drawing.Point(588, 49);
+            this.tbxMainTimetable.Location = new System.Drawing.Point(514, 37);
+            this.tbxMainTimetable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxMainTimetable.Name = "tbxMainTimetable";
-            this.tbxMainTimetable.Size = new System.Drawing.Size(186, 28);
+            this.tbxMainTimetable.Size = new System.Drawing.Size(163, 23);
             this.tbxMainTimetable.TabIndex = 14;
             this.tbxMainTimetable.DropDown += new System.EventHandler(this.DropDownTimetable);
             // 
             // btnMainTimetableSearch
             // 
-            this.btnMainTimetableSearch.Location = new System.Drawing.Point(793, 45);
-            this.btnMainTimetableSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMainTimetableSearch.Location = new System.Drawing.Point(694, 34);
             this.btnMainTimetableSearch.Name = "btnMainTimetableSearch";
-            this.btnMainTimetableSearch.Size = new System.Drawing.Size(86, 32);
+            this.btnMainTimetableSearch.Size = new System.Drawing.Size(75, 24);
             this.btnMainTimetableSearch.TabIndex = 15;
             this.btnMainTimetableSearch.Text = "Suchen";
             this.btnMainTimetableSearch.UseVisualStyleBackColor = true;
             this.btnMainTimetableSearch.Click += new System.EventHandler(this.btnMainTimetableSearch_Click);
             // 
+            // lbxMainStationBoard
+            // 
+            this.lbxMainStationBoard.BackColor = System.Drawing.SystemColors.Control;
+            this.lbxMainStationBoard.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxMainStationBoard.FormattingEnabled = true;
+            this.lbxMainStationBoard.ItemHeight = 15;
+            this.lbxMainStationBoard.Location = new System.Drawing.Point(40, 123);
+            this.lbxMainStationBoard.Name = "lbxMainStationBoard";
+            this.lbxMainStationBoard.Size = new System.Drawing.Size(748, 285);
+            this.lbxMainStationBoard.TabIndex = 16;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnMainTimetableSearch);
             this.Controls.Add(this.tbxMainTimetable);
             this.Controls.Add(this.label2);
@@ -214,7 +221,7 @@
             this.Controls.Add(this.Von);
             this.Controls.Add(this.btnMainSearchChange);
             this.Controls.Add(this.btnMainSearch);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Controls.Add(this.lbxMainStationBoard);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -238,5 +245,6 @@
         private Label label2;
         private ComboBox tbxMainTimetable;
         private Button btnMainTimetableSearch;
+        private ListBox lbxMainStationBoard;
     }
 }
