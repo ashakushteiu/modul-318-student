@@ -156,15 +156,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(400, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(96, 15);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Stations Fahrplan:";
+            this.label2.Text = "Stationsfahrplan:";
             // 
             // tbxMainTimetable
             // 
             this.tbxMainTimetable.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tbxMainTimetable.FormattingEnabled = true;
-            this.tbxMainTimetable.Location = new System.Drawing.Point(514, 37);
+            this.tbxMainTimetable.Location = new System.Drawing.Point(514, 35);
             this.tbxMainTimetable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxMainTimetable.Name = "tbxMainTimetable";
             this.tbxMainTimetable.Size = new System.Drawing.Size(163, 23);
