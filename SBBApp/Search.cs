@@ -19,24 +19,15 @@ namespace EasyTravel
         private List<string> _timetableWhen = new List<string>();
         public List<string> NormalSearch(string from, string to)
         {
-            if (from.Equals("") || to.Equals("") )
-            {
-                _searchResults.Add("Start- und Zielort muss angegeben werden.");
-            }
-            else
-            {
                 var Connections = transport.GetConnections(from, to);
                 foreach (Connection connection in Connections.ConnectionList)
                 {
                     _searchResults.Add("Nach: " + connection.To.Station.Name);
                 }
-            }
             return _searchResults;
         }
         public List<string> TimeSearch(string from, string to)
         {
-            if (from != "" || to != "")
-            {
                 var Connections = transport.GetConnections(from, to);
                 foreach (Connection connection in Connections.ConnectionList)
                 {
@@ -47,33 +38,26 @@ namespace EasyTravel
                     }
                     _timeResult.Add("Abfahrt: " + connection.From.Departure.Value.ToString("HH:mm") + "Uhr" + delay);
                 }
-            }
             return _timeResult;
         }
 
         public List<string> TravelTime(string from, string to)
         {
-            if (from != "" || to != "")
-            {
                 var Connections = transport.GetConnections(from, to);
                 foreach (Connection connection in Connections.ConnectionList)
                 {
                     _travelTime.Add("Ankunft: " + connection.To.Arrival.Value.ToString("HH:mm") + "Uhr");
                 }
-            }
             return _travelTime;
         }
 
         public List<string> TravelDate(string from, string to)
         {
-            if (from != "" || to != "")
-            {
                 var Connections = transport.GetConnections(from, to);
                 foreach (Connection connection in Connections.ConnectionList)
                 {
                     _travelDate.Add("Datum: " + connection.From.Departure.Value.ToString("dd.MM.yyyy"));
                 }
-            }
             return _travelDate;
         }
 

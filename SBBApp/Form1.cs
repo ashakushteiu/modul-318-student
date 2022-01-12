@@ -116,11 +116,14 @@ namespace EasyTravel
 
         private void btnMainTimetableSearch_Click(object sender, EventArgs e)
         {
-            ClearAllListBoxAndBringToFront();
-            lbxMainStationBoard.BringToFront();
-            List<string> timetableTo = search.TimeTableTo(tbxMainTimetable.Text);
-            lbxMainStationBoard.Items.AddRange(timetableTo.ToArray());
-            timetableTo.Clear();
+            if (tbxMainTimetable.Text.Length >= 3)
+            {
+                ClearAllListBoxAndBringToFront();
+                lbxMainStationBoard.BringToFront();
+                List<string> timetableTo = search.TimeTableTo(tbxMainTimetable.Text);
+                lbxMainStationBoard.Items.AddRange(timetableTo.ToArray());
+                timetableTo.Clear();
+            }
         }
 
         private void TbxMainSearchKeyPress(object sender, KeyEventArgs e)
